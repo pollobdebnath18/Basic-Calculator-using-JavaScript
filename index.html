@@ -17,39 +17,39 @@
   <body>
     <section class="max-w-md min-h-screen bg-slate-200 mx-auto ">
       <div class="container">
-        <div class="bg-gray-500">
+        <div class="bg-gray-500 ">
           <form>
-            <div class="pt-20 mb-6 text-center">
-              <input class="w-9/12 h-24 text-end text-black bg-white text-2xl border-none shadow pr-4 flex-1 rounded-xl" type="text" name="display" />
+            <div class="pt-14 mb-10 text-center">
+              <input class="w-9/12 h-24 text-end text-black bg-white text-3xl  border-none shadow pr-4 flex-1 rounded-xl" type="text" name="display" />
             </div>
             <div class="flex justify-center items-center gap-7">
-              <button class="btn shadow rounded-xl p-6 w-16 h-14 text-lg">AC</button>
-              <button class="btn shadow rounded-xl p-6 w-16 h-14 text-lg">DE</button>
-              <button class="btn shadow rounded-xl p-6 w-16 h-14 text-lg ">.</button>
-              <button class="btn shadow rounded-xl p-6 w-16 h-14 text-lg ">/</button>
+              <button type="button" class="btn btn-success shadow rounded-xl p-6 w-16 h-14 text-lg" onclick="display.value ='' ">AC</button>
+              <button type="button" class="btn btn-error shadow rounded-xl p-6 w-16 h-14 text-lg" onclick="display.value = display.value.toString().slice(0,-1) ">DE</button>
+              <button type="button" class="btn shadow rounded-xl p-6 w-16 h-14 text-lg " onclick="display.value +='.' ">.</button>
+              <button type="button" class="btn btn-success shadow rounded-xl p-6 w-16 h-14 text-lg " onclick="display.value +='/' ">/</button>
             </div>
             <div class="flex justify-center items-center gap-7 pt-6">
-              <button class="btn shadow rounded-xl p-7 w-16 h-14 text-lg">7</button>
-              <button class="btn shadow rounded-xl p-7 w-16 h-14 text-lg">8</button>
-              <button class="btn shadow rounded-xl p-7 w-16 h-14 text-lg">9</button>
-              <button class="btn shadow rounded-xl p-7 w-16 h-14 text-lg font-bold">*</button>
+              <button type="button" class="btn shadow rounded-xl p-7 w-16 h-14 text-lg" onclick="display.value +='7' ">7</button>
+              <button type="button" class="btn shadow rounded-xl p-7 w-16 h-14 text-lg" onclick="display.value +='8' ">8</button>
+              <button type="button" class="btn shadow rounded-xl p-7 w-16 h-14 text-lg" onclick="display.value +='9' ">9</button>
+              <button type="button" class="btn btn-success shadow rounded-xl p-7 w-16 h-14 text-lg font-bold" onclick="display.value +='*' ">*</button>
             </div>
             <div class="flex justify-center items-center gap-7 pt-6">
-              <button class="btn shadow rounded-xl p-7 w-16 h-14 text-lg">4</button>
-              <button class="btn shadow rounded-xl p-7 w-16 h-14 text-lg">5</button>
-              <button class="btn shadow rounded-xl p-7 w-16 h-14 text-lg">5</button>
-              <button class="btn shadow rounded-xl p-7 w-16 h-14 text-lg font-bold">-</button>
+              <button type="button" class="btn shadow rounded-xl p-7 w-16 h-14 text-lg" onclick="display.value +='4' ">4</button>
+              <button type="button" class="btn shadow rounded-xl p-7 w-16 h-14 text-lg" onclick="display.value +='5' ">5</button>
+              <button type="button" class="btn shadow rounded-xl p-7 w-16 h-14 text-lg" onclick="display.value +='6' ">6</button>
+              <button type="button" class="btn btn-success shadow rounded-xl p-7 w-16 h-14 text-lg font-bold" onclick="display.value +='-' ">-</button>
             </div>
             <div class="flex justify-center items-center gap-7 pt-6">
-              <button class="btn shadow rounded-xl p-7 w-16 h-14 text-lg">1</button>
-              <button class="btn shadow rounded-xl p-7 w-16 h-14 text-lg">2</button>
-              <button class="btn shadow rounded-xl p-7 w-16 h-14 text-lg">3</button>
-              <button class="btn shadow rounded-xl p-7 w-16 h-14 text-lg font-bold">+</button>
+              <button type="button" class="btn shadow rounded-xl p-7 w-16 h-14 text-lg" onclick="display.value +='1' ">1</button>
+              <button type="button" class="btn shadow rounded-xl p-7 w-16 h-14 text-lg" onclick="display.value +='2' ">2</button>
+              <button type="button" class="btn shadow rounded-xl p-7 w-16 h-14 text-lg" onclick="display.value +='3' ">3</button>
+              <button type="button" class="btn btn-success shadow rounded-xl p-7 w-16 h-14 text-lg font-bold" onclick="display.value +='+' ">+</button>
             </div>
             <div class="flex justify-center items-center gap-7 pt-6 pb-6">
-              <button class="btn shadow rounded-xl p-7 w-16 h-14 text-lg">00</button>
-              <button class="btn shadow rounded-xl p-7 w-16 h-14 text-lg">0</button>
-              <button class="btn shadow rounded-xl p-7 w-40 h-14 text-lg font-bold">=</button>
+              <button type="button" class="btn shadow rounded-xl p-7 w-16 h-14 text-lg" onclick="display.value +='00' ">00</button>
+              <button type="button" class="btn shadow rounded-xl p-7 w-16 h-14 text-lg" onclick="display.value +='0' ">0</button>
+              <button type="button" class="btn btn-success shadow rounded-xl p-7 w-40 h-14 text-lg font-bold" onclick="display.value = eval(display.value) ">=</button>
             </div>
           </form>
         </div>
